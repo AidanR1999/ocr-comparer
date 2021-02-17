@@ -20,7 +20,7 @@ function readImg(img, i) {
             img,
             'eng',
             //log progress to console
-            { logger: m=> console.log(m.progress) }
+            { logger: m=> console.log(m.progress * 100 + '%') }
         //run on completion
         ).then(({data: {text}})=>{
             console.log('done' + img);
