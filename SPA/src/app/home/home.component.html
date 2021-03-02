@@ -1,15 +1,25 @@
-<webcam (initError)="handleInitError($event)" (imageCapture)="handleImage($event)" [trigger]="triggerObservable"></webcam>
-<button class="actionBtn" (click)="triggerSnapshot();">Take A Snapshot</button>
 
-<div class="file-upload">
-  <input type="file" name="image" ng2FileSelect [uploader]="uploader" accept="image/x-png,image/gif,image/jpeg" />
-  <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-    Upload
-  </button>
+<div class="container">
+  <h1>Upload a File</h1>
+  <div class="file-upload">
+    <input type="file" name="image" ng2FileSelect [uploader]="uploader" accept="image/x-png,image/gif,image/jpeg" />
+    <button type="button" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" class="btn btn-success btn-s">
+      Upload
+    </button>
+  </div>
 </div>
+<br>
 
-<p>{{text}}</p>
 
-<div class="snapshot" *ngIf="image">
-  <img [src]="image"/>
+<div class="container">
+  <h1>Alternatively... Take a Photo using a camera</h1>
+  <webcam (initError)="handleInitError($event)" (imageCapture)="handleImage($event)" [trigger]="triggerObservable"></webcam> <br>
+  <button class="btn btn-success btn-s" (click)="triggerSnapshot();">Take A Snapshot</button>
+</div>
+<br>
+
+<div class="container">
+  <h1>Text Appears Here</h1>
+  <h3>(May take a while to appear)</h3>
+  <p>{{text}}</p>
 </div>
