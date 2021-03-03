@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   text: string = "Text Goes Here";
   private trigger: Subject<void> = new Subject<void>();
   public webcamImage: WebcamImage = null;
-  uploadUrl = 'http://localhost:4000/api/upload';
-  screenshotUrl = 'http://localhost:4000/api/screenshot';
+  uploadUrl = 'http://api.aidanrooney.dev/api/upload';
+  screenshotUrl = 'http://api.aidanrooney.dev/api/screenshot';
   public uploader: FileUploader = new FileUploader({
     url: this.uploadUrl,
     itemAlias: 'image'
