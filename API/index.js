@@ -48,6 +48,11 @@ app.post('/api/upload', upload.single('image'), (req, res)=>{
     })
     }catch(error) {
         console.log(error);
+        return res.json(
+            {
+                message:"Error"
+            }
+        )
     }
 })
 
@@ -70,6 +75,11 @@ app.post('/api/screenshot', (req, res)=>{
     })
     }catch(error) {
         console.log(error);
+        return res.json(
+            {
+                message:"Error"
+            }
+        )
     }
 })
 
