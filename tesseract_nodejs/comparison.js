@@ -2,8 +2,8 @@ const { execFile } = require('child_process');
 const fs = require('fs');
 
 //load files
-const originalsDir = "E:/repos/ocr_comparer/tests/txt/"
-const engineResultsDir = "E:/repos/ocr_comparer/results/tesseract/"
+const originalsDir = "../tests/txt/"
+const engineResultsDir = "../results/tesseract/"
 
 var originals = fs.readdirSync(originalsDir);
 var engineResults = fs.readdirSync(engineResultsDir);

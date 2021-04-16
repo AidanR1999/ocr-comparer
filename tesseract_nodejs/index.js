@@ -3,8 +3,8 @@ const ts = require ('tesseract.js');
 const fs = require('fs');
 
 //absolute directory for images and results
-const unalteredDir = "E:/repos/ocr_comparer/tests/unaltered/"
-const resultsDir = "E:/repos/ocr_comparer/results/tesseract/"
+const unalteredDir = "../tests/img/"
+const resultsDir = "../results/tesseract/"
 
 //read all image filenames
 var unaltered = fs.readdirSync(unalteredDir);
